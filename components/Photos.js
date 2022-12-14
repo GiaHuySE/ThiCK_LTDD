@@ -12,7 +12,7 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-
+import Categories from "./Categories copy";
 const Photos = ({ navigation }) => {
   const [list, setList] = useState([]);
   const [visible, setViisble] = useState(false);
@@ -52,16 +52,6 @@ const Photos = ({ navigation }) => {
     // });
   };
 
-  const handelDetete = (item) => {
-    axios({
-      url: "https://fakestoreapi.com/products/" + item.id,
-      method: "DELETE",
-    }).then((res) => {
-      var response = res.data;
-      getList();
-    });
-  };
-
   const onChangeTitle = (value) => {
     setProductTitle(value);
   };
@@ -99,9 +89,9 @@ const Photos = ({ navigation }) => {
           />
         </TouchableOpacity>
         <Text style={{ flex: 1, flexWrap: "wrap" }}>Title: {item.title}</Text>
-        <Text style={{ flex: 1, flexWrap: "wrap" }}>
+        {/* <Text style={{ flex: 1, flexWrap: "wrap" }}>
           Description: {item.description}
-        </Text>
+        </Text> */}
         <Text style={{ flex: 1, flexWrap: "wrap" }}>price: {item.price}</Text>
         <View>
           {/* <TouchableOpacity onPress={() => handelDetete(item)}>
@@ -147,7 +137,7 @@ const Photos = ({ navigation }) => {
   };
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View
+      {/* <View
         style={{
           flexDirection: "row",
           justifyContent: "space-between",
@@ -251,7 +241,11 @@ const Photos = ({ navigation }) => {
             </View>
           </SafeAreaView>
         </Modal>
+      </View> */}
+      <View>
+        <Text style={{ fontWeight: "bold" }}>Welcome back</Text>
       </View>
+      {/* <Categories onChange={(id) => setActiveCategoryId(id)} /> */}
       <FlatList
         style={{ flex: 1, padding: 8 }}
         data={list}
