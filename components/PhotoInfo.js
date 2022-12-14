@@ -35,9 +35,7 @@ const PhotoInfo = () => {
           marginTop: 20,
         }}
       >
-        <Text style={{ color: "white", textAlign: "center" }}>
-          Upload image
-        </Text>
+        <Text style={{ color: "white", textAlign: "center" }}>Add to cart</Text>
       </TouchableOpacity>
     </View>
   );
